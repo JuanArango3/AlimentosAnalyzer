@@ -38,7 +38,7 @@ public class AlimentoAnalyzer {
                     .filter(a -> a.getHierro() > 1.0 && a.getGrasas() < 3.0)
                     .toList();
             log.info("Alimentos con más de 1mg de hierro y menos de 3g de grasa:");
-            hierroYBajaGrasa.forEach(alimento -> log.info("{} (Hierro: {}, grasas: {})", alimento.getNombre(), alimento.getHierro(), alimento.getGrasas()));
+            hierroYBajaGrasa.forEach(alimento -> log.info("->{} (Hierro: {}, grasas: {})", alimento.getNombre(), alimento.getHierro(), alimento.getGrasas()));
         } catch (Exception e) {
             log.error(e);
         }
