@@ -22,7 +22,7 @@ public class LectorExcel implements LectorArchivo {
             Sheet hoja = libro.getSheetAt(0);
 
             for (Row fila : hoja) {
-                String nombre = getString(fila.getCell(0));
+                String nombre = getString(fila.getCell(0)).trim();
                 int calorias = (int) getNumeric(fila.getCell(1));
                 float proteinas = (float) getNumeric(fila.getCell(2));
                 float grasas = (float) getNumeric(fila.getCell(3));
